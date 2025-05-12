@@ -1,0 +1,234 @@
+VIDEO STREAMING WEBSITE DOCUMENTATION
+====================================
+
+1. APP.PY (Main Application File)
+--------------------------------
+This is the main file that runs the website. It contains:
+
+a) Setup and Configuration:
+   - Uses Flask framework
+   - Sets up database (SQLite)
+   - Configures upload limits (500MB max)
+   - Sets allowed video formats (mp4, avi, mov, wmv, flv, mkv)
+   - Creates necessary folders (uploads, thumbnails)
+
+b) User System:
+   - Registration and login
+   - Password security (hashed passwords)
+   - Superuser role for admin features
+   - Session management
+
+c) Video Management:
+   - Upload videos 
+   - Delete videos 
+   - Watch videos (all logged-in users)
+   - Automatic thumbnail generation
+   - File size and format validation
+
+d) Admin Features:
+   - User management
+   - Video management
+   - Access control for admin functions
+
+2. TEMPLATES (HTML Files)
+------------------------
+a) base.html:
+   - Main layout template
+   - Navigation menu
+   - Theme toggle (dark/light mode)
+   - Responsive design
+
+b) home.html:
+   - Displays video list
+   - Shows video thumbnails
+   - Upload and delete options for superusers
+   - Login/register prompts for guests
+
+c) login.html:
+   - User login form
+   - Error messages
+   - Link to registration
+
+d) register.html:
+   - New user registration
+   - Username validation
+   - Password requirements
+
+e) upload.html:
+   - Video upload form
+   - Title input
+   - File selection
+   - Format validation
+
+f) watch.html:
+   - Video player
+   - Video title
+   - Back to home option
+
+g) admin_dashboard.html:
+   - User list with delete options
+   - Video list with delete options
+   - Access control messages
+
+3. STYLE.CSS (Website Styling)
+-----------------------------
+a) General Layout:
+   - Responsive design
+   - Clean and modern look
+   - Consistent spacing
+   - Mobile-friendly
+
+b) Theme Support:
+   - Dark mode
+   - Light mode
+   - Smooth transitions
+   - Theme-specific colors
+
+c) Video Cards:
+   - Thumbnail display
+   - Hover effects
+   - Action buttons
+   - Responsive grid layout
+
+d) Forms and Buttons:
+   - Styled input fields
+   - Clear button states
+   - Error message styling
+   - Success message styling
+
+4. DATABASE (Data Storage)
+-------------------------
+a) User Table:
+   - Username (unique)
+   - Password (hashed)
+   - Superuser flag
+   - User ID
+
+b) Video Table:
+   - Title
+   - Filename
+   - Thumbnail filename
+   - Upload date
+   - Video ID
+
+5. SECURITY FEATURES
+-------------------
+a) User Security:
+   - Password hashing
+   - Session management
+   - Login required for videos
+   - Access control for admin features
+
+b) File Security:
+   - File type validation
+   - Size limits
+   - Secure file storage
+   - Thumbnail generation safety
+
+c) Admin Security:
+   - Superuser-only access
+   - Protected routes
+   - Error handling
+   - Safe file deletion
+
+6. HOW TO USE THE WEBSITE
+------------------------
+a) For Normal Users:
+   1. Register an account
+   2. Log in
+   3. Browse videos
+   4. Watch videos
+   5. Toggle theme
+
+b) For Superusers:
+   1. Log in with superuser account
+   2. Upload videos
+   3. Delete videos
+   4. Manage users
+   5. Access admin dashboard
+
+7. ERROR HANDLING
+----------------
+a) User Errors:
+   - Invalid login
+   - Registration conflicts
+   - Access denied
+   - File upload errors
+
+b) System Errors:
+   - Database errors
+   - File operations
+   - Thumbnail generation
+   - Server errors
+
+8. TECHNICAL REQUIREMENTS
+------------------------
+a) Python Packages:
+   - Flask
+   - Flask-SQLAlchemy
+   - Flask-Login
+   - Werkzeug
+   - moviepy
+   - imageio
+
+b) File Structure:
+   - static/uploads (for videos)
+   - static/thumbnails (for thumbnails)
+   - static/css (for styles)
+   - templates (for HTML files)
+   - instance (for database)
+
+c) Browser Support:
+   - Modern browsers
+   - JavaScript enabled
+   - HTML5 video support
+
+9. VIDEO THUMBNAILS
+------------------
+a) Thumbnail Generation:
+   - Automatic on upload
+   - Captures frame at 1 second
+   - Fallback to first frame
+   - Error handling
+
+b) Thumbnail Display:
+   - Grid layout
+   - Hover effects
+   - Fallback image
+   - Responsive sizing
+
+c) Thumbnail Management:
+   - Automatic cleanup
+   - Storage optimization
+   - Error recovery
+   - Format consistency
+
+10. MAINTENANCE
+--------------
+a) Regular Tasks:
+   - Database backups
+   - File cleanup
+   - Error monitoring
+   - Performance optimization
+
+b) Troubleshooting:
+   - Check error logs
+   - Verify file permissions
+   - Monitor disk space
+   - Test video playback
+
+11. FUTURE IMPROVEMENTS
+---------------------
+a) Planned Features:
+   - Video categories
+   - Search functionality
+   - User profiles
+   - Video comments
+
+b) Technical Upgrades:
+   - Video compression
+   - CDN integration
+   - Analytics
+   - API development
+
+This website is designed to be simple to use while maintaining security and providing a good user experience for both normal users and administrators. 
