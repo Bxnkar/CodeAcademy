@@ -94,15 +94,6 @@ python app.py
 
 ---
 
-## 🔐 Admin Credentials
-> **⚠️ WARNING:** The system will auto-generate a Superuser on the first run. 
-> Change these immediately or risk being hacked by a script kiddie.
-
-- **Username**: `piyu`
-- **Password**: `piyu`
-
----
-
 ## 🤝 Join the Resistance (Contributing)
 Got a crazy idea? We want it.
 1. Fork it.
@@ -110,8 +101,3 @@ Got a crazy idea? We want it.
 3. Commit it.
 4. Push it.
 5. PR it.
-
----
-
-## 📄 License
-Distributed under the **MIT License**. Because knowledge should be free.
